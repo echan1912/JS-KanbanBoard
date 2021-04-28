@@ -18,7 +18,7 @@ add_btn.addEventListener('click', () => {
 const create_item = () => {
   let item = document.createElement('div');
   item.classList.add('item');
-  item = 'item-' + order;
+  item.id = 'item-' + order;
   item.draggable = true;
   item.addEventListener('dragstart', event => event.dataTransfer.setData('text', event.target.id));
   item.addEventListener('dragend', event => event.dataTransfer.clearData());
@@ -32,7 +32,7 @@ const create_item = () => {
       order += 1;
       item.innerHTML = input.value;
       adding = false;
-    } else {error.innerHTML = 'message';}
+    } else {error.innerHTML = message;}
   });
 
   item.appendChild(save_btn);
