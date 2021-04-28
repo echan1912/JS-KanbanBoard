@@ -36,7 +36,7 @@ const create_item = () => {
   });
 
   item.appendChild(save_btn);
-  return create_item();
+  return item;
 
 };
 
